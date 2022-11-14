@@ -1,11 +1,15 @@
 declare namespace TypeUtil {
-  type Noop = (...args: any) => any;
+	type Noop = (...args: any) => any;
 
-  type UnionInclude<T, K extends keyof T> = K extends keyof T ? true : false;
+	type UnionInclude<T, K extends keyof T> = K extends keyof T ? true : false;
 
-  type Writable<T> = { [K in keyof T]: T[K] };
+	type Writable<T> = { [K in keyof T]: T[K] };
 
-  type FirstOfArray<T extends any[]> = T extends [infer First, ...infer _Rest] ? First : never;
+	type FirstOfArray<T extends any[]> = T extends [infer First, ...infer _Rest]
+		? First
+		: never;
 
-  type LastOfArray<T extends any[]> = T extends [...infer _Rest, infer Last] ? Last : never;
+	type LastOfArray<T extends any[]> = T extends [...infer _Rest, infer Last]
+		? Last
+		: never;
 }

@@ -1,12 +1,12 @@
 <template>
-  <n-back-top :show="show" class="z-1000" />
+	<n-back-top :show="show" class="z-1000" />
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue';
-import { useWindowScroll } from '@vueuse/core';
+import { computed } from "vue";
+import { useWindowScroll } from "@vueuse/core";
 
-defineOptions({ name: 'GlobalBackTop' });
+defineOptions({ name: "GlobalBackTop" });
 
 const { y: scrollY } = useWindowScroll();
 

@@ -1,3 +1,3 @@
-import LayoutCheckbox from './LayoutCheckbox.vue';
+import LayoutCheckbox from "./LayoutCheckbox.vue";
 
 export { LayoutCheckbox };

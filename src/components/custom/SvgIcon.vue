@@ -1,23 +1,23 @@
 <template>
-  <svg aria-hidden="true" width="1em" height="1em">
-    <use :xlink:href="symbolId" fill="currentColor" />
-  </svg>
+	<svg aria-hidden="true" width="1em" height="1em">
+		<use :xlink:href="symbolId" fill="currentColor" />
+	</svg>
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed } from "vue";
 
-defineOptions({ name: 'SvgIcon' });
+defineOptions({ name: "SvgIcon" });
 
 interface Props {
-  /** 前缀 */
-  prefix?: string;
-  /** 图标名称(图片的文件名) */
-  icon: string;
+	/** 前缀 */
+	prefix?: string;
+	/** 图标名称(图片的文件名) */
+	icon: string;
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  prefix: 'icon-custom'
+	prefix: "icon-custom",
 });
 
 const symbolId = computed(() => `#${props.prefix}-${props.icon}`);
